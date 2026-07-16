@@ -745,6 +745,11 @@ header nav .form i {
   position: relative;
   quotes: "\f10d" "\f10e";
 }
+@media (max-width: 685px) {
+  .quote q {
+    max-width: 600px;
+  }
+}
 .quote q::before {
   content: open-quote;
   font-family: "Font Awesome 5 Free";
@@ -762,3 +767,173 @@ header nav .form i {
   font-weight: 400;
 }
 /* End Quote */
+/* Start Pricing */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.pricing .plan {
+  text-align: center;
+  background-color: #fcfcfc;
+}
+.pricing .plan .head {
+  padding: 40px 20px;
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+.pricing .plan .head h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .plan .head span {
+  font-size: 60px;
+  font-weight: bold;
+}
+.pricing .plan .head span::before {
+  content: "$";
+  position: relative;
+  font-size: 25px;
+  top: -40px;
+  left:0;
+  margin-right: 15px;
+  font-weight: normal;
+}
+.pricing .plan .head span::after {
+  content: "/MO";
+  font-size: 20px;
+  position: relative;
+  right: -15px;
+}
+.pricing .plans .plan ul {
+  border-bottom: 2px solid var(--main-color);
+}
+.pricing .plans .plan ul li {
+  padding: 20px;
+  position: relative;;
+}
+
+.pricing .plans .plan ul li:not(:last-child)::after{
+  content: '';
+  width: 120px;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.pricing .plans .plan .foot a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid var(--main-color);
+  width: fit-content;
+  margin: 30px auto;
+}
+.pricing .contact-text {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing .contact-link {
+  display: block;
+  text-align: center;
+  background-color: var(--main-color);
+  width: fit-content;
+  padding: 15px 30px;
+  margin: 20px auto;
+}
+.pricing .contact-link a {
+  text-decoration: none;
+  color: white;
+}
+/* End Pricing */
+/* Start Subscribe */
+.subscribe {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url(../Images/assets/form.jpg);
+  background-size: cover;
+  position: relative;
+}
+.subscribe::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 75%);
+}
+.subscribe .container {
+  position: relative;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+.subscribe form {
+  display: flex;
+  position: relative;
+  flex: 1;
+  max-width: 100%;
+}
+.subscribe form i {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  left: 20px;
+  color: white;
+}
+@media (max-width: 991px) {
+  .subscribe form {
+    width: 100%
+  }
+}
+.subscribe form input[type="email"] {
+  width: calc(100% - 130px);
+  padding: 20px 20px 20px 60px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-right: none;
+  caret-color: var(--main-color);
+  color: white;
+}
+.subscribe form ::placeholder {
+  color: white;
+}
+.subscribe form input[type="email"]:focus {
+  outline: none;
+}
+.subscribe form input[type="submit"]  {
+  padding: 10px 20px;
+  width: 130px;
+  border: 2px solid white;
+  border-left: none;
+  background-color: var(--main-color);
+  color: white;
+  text-transform: uppercase;
+}
+.subscribe p {
+  color: white;
+  line-height: 2;
+  margin-left: 50px;
+  flex-basis: 40%;
+}
+@media (max-width: 991px) {
+  .subscribe p {
+    margin: 30px 0 0;
+    text-align: center;
+  }
+}
+/* End Subscribe */
